@@ -8,7 +8,6 @@ sum = 0
 for _ in range(10):
     list1.append(random.randrange(10))
 print(list1)
-for i in range(len(list1)):
-    if i % 2 != 0:
-        sum += list1[i]
+for i in range(1, len(list1), 2):
+    sum += list1[i]
 print(sum)
