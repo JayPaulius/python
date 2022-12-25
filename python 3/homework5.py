@@ -2,14 +2,21 @@
 # Пример:
 # - для k = 8 список будет выглядеть так: [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
 
-num = int(input("введите число: "))
-list1 = [0, 1]
-for i in range(num - 1):
-    list1.append(list1[i] - list1[i + 1])
-list1.reverse()
-for i in range(num - 1, num * 2 - 1):
-    list1.append(list1[i] + list1[i + 1])
-print(list1)
+
+def fibonacci(num):
+    list1 = [0, 1]
+    for i in range(num - 1):
+        list1.append(list1[i] - list1[i + 1])
+    list1.reverse()
+    for i in range(num - 1, num * 2 - 1):
+        list1.append(list1[i] + list1[i + 1])
+    return list1
+
+def main():
+    num = int(input("введите число: "))
+    print(fibonacci(num))
+
+main()
 
 # num = int(input("введите число: "))
 # list1 = []
