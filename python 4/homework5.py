@@ -38,8 +38,10 @@ def sum(polynom1, polynom2):
 def main():
     polynom1 = read_file('file1.txt')
     polynom2 = read_file('file2.txt')
-    print(polynom1)
-    print(polynom2)
-    print(f'сумма многочленов: {sum(polynom1, polynom2)}')
-
+    print('многочлен 1: ', polynom1)
+    print('многочлен 2: ', polynom2)
+    if (get_polynom_degree(polynom1)) == (get_polynom_degree(polynom2)):
+        print(f'сумма многочленов: {sum(polynom1, polynom2)}')
+    else:
+        print('количество одночленов первого многочлена не равно количеству одночленов второго многочлена')
 main()
